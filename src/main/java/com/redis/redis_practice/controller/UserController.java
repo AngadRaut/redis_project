@@ -34,6 +34,7 @@ public class UserController {
 
     @GetMapping("/get/by-id/{id}")
     public ResponseEntity<?> getUserById(@PathVariable("id") Long id){
+        logger.info("getting user with id {}",id);
         User userById = this.userService.getUserById(id);
         return ResponseEntity.status(HttpStatus.FOUND).body(userById);
     }
