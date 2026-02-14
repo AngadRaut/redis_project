@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
     }
 
     public UserServiceImpl(){
-        logger.info("\n\n\n********************************Object is Created of UserServiceImpl class*******************************\n\n\n");
+        logger.info("\n\n\n******************************** Object is Created of UserServiceImpl class *******************************\n\n\n");
     }
 
     @CachePut(value = "user",key = "#users.id")
