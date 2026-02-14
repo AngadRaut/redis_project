@@ -27,6 +27,7 @@ public class UserController {
 
     @PostMapping("/add")
     public ResponseEntity<?> addUser(@RequestBody User user){
+        logger.info("adding user with userId,{}",user.getId());
         this.userService.addUser(user);
         return ResponseEntity.ok(HttpStatus.CREATED);
     }
