@@ -61,4 +61,9 @@ public class UserServiceImpl implements UserService {
         User user = this.userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("User Not Found!"));
         this.userRepository.deleteById(id);
     }
+
+    @Override
+    public Object deleteAllUser() {
+        return null;
+    }
 }
